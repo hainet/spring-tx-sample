@@ -25,10 +25,7 @@ public class TransactionTest {
 
     @After
     public void count() {
-        System.out.println(jdbc.queryForList("SELECT * FROM model"));
-
-        int count = jdbc.queryForList("SELECT * FROM model").size();
-        System.out.println("挿入件数：" + count);
+        System.out.println("挿入件数：" + jdbc.queryForList("SELECT * FROM model").size());
         jdbc.update("DELETE FROM model");
     }
 
